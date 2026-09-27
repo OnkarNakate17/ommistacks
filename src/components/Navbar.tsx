@@ -4,11 +4,9 @@ import { GithubIcon, LinkedinIcon, YoutubeIcon } from './BrandIcons'
 import { Menu, X } from 'lucide-react'
 import { BrandMark } from './BrandMark'
 import { SocialButton } from './SocialButton'
-import { ThemeToggle } from './ThemeToggle'
 import { Button } from './Button'
 import { socialLinks as defaultSocialLinks, type SocialLinks } from '../data/site'
 import { useContent } from '../lib/useContent'
-import type { Theme } from '../hooks/useTheme'
 
 const navItems = [
   { label: 'Home', to: '/' },

@@ -1,6 +1,5 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
 import { AboutPage } from './pages/About'
@@ -9,7 +8,6 @@ import { ProjectsPage } from './pages/Projects'
 import { ContentPageRoute } from './pages/ContentPage'
 import { ExperiencePage } from './pages/Experience'
 import { ContactPage } from './pages/Contact'
-import { useTheme } from './hooks/useTheme'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -20,7 +18,6 @@ function ScrollToTop() {
 }
 
 function App() {
-  const { theme, toggleTheme } = useTheme()
 
   return (
     <HashRouter>
@@ -31,7 +28,6 @@ function App() {
         >
           Skip to content
         </a>
-        <Navbar theme={theme} onToggleTheme={toggleTheme} />
         <ScrollToTop />
         <main id="main">
           <Routes>
