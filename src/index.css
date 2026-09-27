@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Palette pulled from the OmmiStacks mark: mint/teal-green ring + blue ring. */
+  --color-ommi-yellow: #22e0a6;
+  --color-ommi-blue: #0057ff;
+  --color-ommi-blue-light: #22b8ff;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #090c11;
+  --bg-elevated: #10151d;
+  --bg-elevated-2: #161c26;
+  --border: #232b38;
+  --text-primary: #edeff2;
+  --text-secondary: #aab2c0;
+  --text-muted: #6c7686;
+  --ommi-word: #2be6a4;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --bg-elevated: #ffffff;
+  --bg-elevated-2: #eef0f3;
+  --border: #dfe3e9;
+  --text-primary: #10151d;
+  --text-secondary: #454f5f;
+  --text-muted: #71798a;
+  --ommi-word: #0057ff;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-ommi-yellow);
+  color: #10151d;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ommi-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

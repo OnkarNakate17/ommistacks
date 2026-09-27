@@ -1,0 +1,20 @@
+[
+  {
+    "name": "FinBook",
+    "description": "Business accounting platform — customers, transactions and financial workflows.",
+    "url": "https://github.com/OnkarNakate17/finbook",
+    "tech": ["React", "TypeScript", "Spring Boot", "PostgreSQL"]
+  },
+  {
+    "name": "PatSeva",
+    "description": "Microservices-based core banking system with API gateway and service discovery.",
+    "url": "https://github.com/OnkarNakate17/patseva",
+    "tech": ["Java", "Spring Cloud", "PostgreSQL", "Redis"]
+  },
+  {
+    "name": "NeuroCuts",
+    "description": "AI-powered autonomous video editing pipeline, run locally.",
+    "url": "https://github.com/OnkarNakate17/neurocuts",
+    "tech": ["Python", "FastAPI", "Whisper", "FFmpeg"]
+  }
+]
