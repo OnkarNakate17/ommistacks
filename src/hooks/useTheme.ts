@@ -1,26 +1,14 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
-export type Theme = 'dark' | 'light'
-const STORAGE_KEY = 'ommistacks-theme'
-
-function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark'
-  const stored = window.localStorage.getItem(STORAGE_KEY)
-  if (stored === 'dark' || stored === 'light') return stored
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-}
+export type Theme = 'dark'
 
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme)
-
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    window.localStorage.setItem(STORAGE_KEY, theme)
-  }, [theme])
-
-  const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+    document.documentElement.setAttribute('data-theme', 'dark')
   }, [])
 
-  return { theme, toggleTheme }
+  return {
+    theme: 'dark' as const,
+    toggleTheme: () => {},
+  }
 }

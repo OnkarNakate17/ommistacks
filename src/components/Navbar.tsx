@@ -20,7 +20,7 @@ const navItems = [
   { label: 'Contact', to: '/contact' },
 ]
 
-export function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => void }) {
+export function Navbar({  }: { onToggleTheme: () => void }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const socialLinks = useContent<SocialLinks>('social.json', defaultSocialLinks)
@@ -48,9 +48,6 @@ export function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: 
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2.5" aria-label="OmmiStacks home">
           <BrandMark />
-          <span className="font-[var(--font-display)] text-lg font-semibold text-[var(--text-primary)]">
-            Ommi<span style={{ color: 'var(--ommi-word)' }}>Stacks</span>
-          </span>
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
@@ -67,14 +64,12 @@ export function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: 
           <SocialButton href={socialLinks.github} label="GitHub" icon={<GithubIcon size={16} />} />
           <SocialButton href={socialLinks.linkedin} label="LinkedIn" icon={<LinkedinIcon size={16} />} />
           <SocialButton href={socialLinks.youtube} label="YouTube" icon={<YoutubeIcon size={16} />} />
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <Button as="a" href="#/projects" variant="primary">
             Explore Projects
           </Button>
         </div>
 
         <div className="flex items-center gap-3 lg:hidden">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}

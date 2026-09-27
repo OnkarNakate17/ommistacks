@@ -6,34 +6,26 @@
   --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  /* Palette pulled from the OmmiStacks mark: mint/teal-green ring + blue ring. */
+  /* OmmiStacks brand colors */
   --color-ommi-yellow: #22e0a6;
   --color-ommi-blue: #0057ff;
   --color-ommi-blue-light: #22b8ff;
 }
 
+/* Permanent Dark Theme */
 :root {
   color-scheme: dark;
-  --bg: #090c11;
-  --bg-elevated: #10151d;
-  --bg-elevated-2: #161c26;
-  --border: #232b38;
-  --text-primary: #edeff2;
-  --text-secondary: #aab2c0;
-  --text-muted: #6c7686;
-  --ommi-word: #2be6a4;
-}
 
-:root[data-theme='light'] {
-  color-scheme: light;
-  --bg: #f6f7f9;
-  --bg-elevated: #ffffff;
-  --bg-elevated-2: #eef0f3;
-  --border: #dfe3e9;
-  --text-primary: #10151d;
-  --text-secondary: #454f5f;
-  --text-muted: #71798a;
-  --ommi-word: #0057ff;
+  --bg: #0a0d12;
+  --bg-elevated: #11161d;
+  --bg-elevated-2: #181e27;
+  --border: #252c36;
+
+  --text-primary: #f5f7fa;
+  --text-secondary: #aeb7c4;
+  --text-muted: #737d8c;
+
+  --ommi-word: #22e0a6;
 }
 
 * {
@@ -42,6 +34,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -49,12 +42,14 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {

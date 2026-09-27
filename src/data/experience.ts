@@ -8,7 +8,7 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    role: 'Backend Software Developer',
+    role: 'Software Developer',
     location: 'Pune, India',
     period: '3+ years',
     focus: ['Java', 'Spring Boot', 'Microservices', 'Fintech'],

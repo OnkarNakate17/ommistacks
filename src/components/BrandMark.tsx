@@ -1,6 +1,6 @@
 import brandIcon from '../assets/brand-icon.png'
 
-export function BrandMark({ size = 30 }: { size?: number }) {
+export function BrandMark({ size = 80 }: { size?: number }) {
   return (
     <img
       src={brandIcon}
