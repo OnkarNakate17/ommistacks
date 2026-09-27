@@ -35,7 +35,7 @@ jobs:
         env:
           # Must match "/<repo-name>/" for a project site, or "/" for a
           # user/organization site (<user>.github.io).
-          VITE_BASE_PATH: /OmmiStacks/
+          VITE_BASE_PATH: /ommistacks/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

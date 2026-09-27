@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 // For a GitHub Pages *project* site (https://<user>.github.io/<repo>/) this
 // should be "/<repo>/". For a *user/organization* site
 // (https://<user>.github.io/) it should be "/".
-const base = process.env.VITE_BASE_PATH || '/OmmiStacks/'
+const base = process.env.VITE_BASE_PATH || '/ommistacks/'
 
 export default defineConfig({
   base,
